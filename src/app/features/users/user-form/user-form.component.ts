@@ -40,7 +40,9 @@ export class UserFormComponent {
       email: ['', [Validators.required, Validators.email]],
       cellPhone: ['', Validators.required],
     });
+  }
 
+  ngOnInit() {
     this.loadUser();
   }
 
