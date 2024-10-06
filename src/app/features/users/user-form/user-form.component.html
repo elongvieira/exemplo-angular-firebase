@@ -1,0 +1,45 @@
+<div>
+    <p-panel styleClass="panel-custom">
+        <ng-template pTemplate="header">
+            <div>
+                <span>Novo Usuário</span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+            <form [formGroup]="userForm">
+                <div class="p-fluid">
+
+                    <div class="p-field">
+                        <label for="name">Nome *</label>
+                        <input type="text" formControlName="name" pInputText placeholder="Digite seu nome" />
+                        <small *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="p-error">
+                            {{ getErrorMessage('name') }}
+                        </small>
+                    </div>
+
+                    <div class="p-field">
+                        <label for="email">Email *</label>
+                        <input type="text" formControlName="email" pInputText placeholder="Digite seu email" />
+                        <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="p-error">
+                            {{ getErrorMessage('email') }}
+                        </small>
+                    </div>
+
+                    <div class="p-field">
+                        <label for="cellPhone">Celular *</label>
+                        <p-inputMask type="text" mask="(99) 99999-9999" formControlName="cellPhone"
+                            placeholder="Digite seu celular" />
+                        <small *ngIf="userForm.get('cellPhone')?.invalid && userForm.get('cellPhone')?.touched"
+                            class="p-error">
+                            {{ getErrorMessage('cellPhone') }}
+                        </small>
+                    </div>
+                </div>
+
+                <div>
+                    <p-button label="Salvar"  (click)="save()"></p-button>
+                </div>
+            </form>
+        </ng-template>
+    </p-panel>
+</div>

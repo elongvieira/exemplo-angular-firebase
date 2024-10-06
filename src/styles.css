@@ -1,3 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+
+.panel-custom {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.p-fluid .p-field {
+    margin-bottom: 1rem;
+}
+
+.p-button {
+    margin-right: 0.5rem;
+}

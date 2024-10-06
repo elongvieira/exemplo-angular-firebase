@@ -1,0 +1,32 @@
+<div>
+    <p-panel styleClass="panel-custom">
+        <ng-template pTemplate="header">
+            <div>
+                <span>Usuários - <a href="/user/new">novo</a></span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+            <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-user>
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.cellPhone }}</td>
+                        <td>
+                            <button pButton [routerLink]="['/user', user.id]">Editar</button>
+                            <button pButton (click)="delete(user.id)">Deletar</button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </ng-template>
+    </p-panel>
+</div>
