@@ -4,7 +4,11 @@ Este é um projeto desenvolvido em **Angular versão 18**. Atualmente, o projeto
 
 ## Requisitos
 
-- **Node.js**: Versão mínima recomendada é **v22.0**.
+- **Node.js**: Versão recomendada é **v22.0**.
+- **Angular CLI**: Certifique-se de que o **Angular CLI** está instalado globalmente em sua máquina. Caso não tenha, instale com o comando:
+    ```bash
+    npm install -g @angular/cli
+    ```
 
 ## Instalação
 
