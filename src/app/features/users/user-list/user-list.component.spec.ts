@@ -3,6 +3,7 @@ import { UserListComponent } from './user-list.component';
 import { UserService } from '../../../services/user-service';
 import { User } from '../../../models/user-model';
 import { of } from 'rxjs';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('UserListComponent', () => {
   let component: UserListComponent;
@@ -13,7 +14,7 @@ describe('UserListComponent', () => {
     userServiceMock = jasmine.createSpyObj('UserService', ['getAll', 'remove']);
 
     await TestBed.configureTestingModule({
-      imports: [UserListComponent],
+      imports: [UserListComponent, NoopAnimationsModule],
       providers: [
         { provide: UserService, useValue: userServiceMock }
       ]

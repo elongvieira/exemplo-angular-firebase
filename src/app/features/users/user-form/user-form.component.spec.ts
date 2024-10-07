@@ -6,6 +6,7 @@ import { UserFormComponent } from './user-form.component';
 import { UserService } from '../../../services/user-service';
 import { User } from '../../../models/user-model';
 import { ActivatedRouteSnapshot } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('UserFormComponent', () => {
   let component: UserFormComponent;
@@ -24,7 +25,7 @@ describe('UserFormComponent', () => {
     };
 
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, UserFormComponent],
+      imports: [ReactiveFormsModule, UserFormComponent, NoopAnimationsModule],
       providers: [
         { provide: UserService, useValue: userServiceMock },
         { provide: Router, useValue: routerMock },
